@@ -25,8 +25,10 @@ const TodoForm = ({ dispatch }) => {
         <button 
         className="clear-completed-btn"
         onClick={(event) => {
-          event.preventDefault()}
-          } 
+          event.preventDefault()
+          dispatch({ type: "CLEAR_COMPLETED" })
+          }
+        } 
         >
         Clear Completed
         </button>

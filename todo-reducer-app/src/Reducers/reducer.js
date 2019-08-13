@@ -8,12 +8,20 @@ export const initialTodos = [
 
 export const reducer = (state, action) => {
   switch (action.type) {
+
     case "ADD_TODO":
-      
       return [
         ...state,
         action.payload
-      ]
+      ];
+
+    case "SET_COMPLETED":
+      action.payload.completed = !action.payload.completed;
+      return [...state];
+
+    case "CLEAR_COMPLETED":
+      return state.filter(todo => todo.completed === false)
+
     default:
       return state;
   }

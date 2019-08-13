@@ -3,8 +3,18 @@
   height: 75px;
   margin: 10px auto;
   align-items: center;
+  cursor: pointer;
+  transition: .5s;
+  background: white;
 
   p {
     text-align: center;
+    transition: all .5s;
   }
+}
+.todo.completed {
+  background: rgba(255, 255, 255, 0.39);
+}
+.todo.completed p {
+  text-decoration: line-through;
 }

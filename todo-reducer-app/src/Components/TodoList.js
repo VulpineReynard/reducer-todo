@@ -1,7 +1,7 @@
 import React from 'react';
 import Todo from './Todo';
 
-const TodoList = ({ todoList }) => {
+const TodoList = ({ todoList, dispatch }) => {
   
 
   console.log(todoList);
@@ -9,7 +9,7 @@ const TodoList = ({ todoList }) => {
   return (
     <div className="todo-list">
       {todoList.map((todo, index) => {
-        return <Todo todo={todo} key={index}/>
+        return <Todo todo={todo} key={index} dispatch={dispatch}/>
       })}
     </div>
   );

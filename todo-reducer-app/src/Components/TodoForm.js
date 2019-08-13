@@ -1,28 +1,47 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-const TodoForm = () => {
+const TodoForm = ({ dispatch }) => {
+  const [newTodo, setNewTodo] = useState({item: ''});
+
+  const handleChanges = (event) => {
+    setNewTodo({
+      item: event.target.value,
+      completed: false,
+      id: Date.now()
+    })
+  }
   return (
-    <form onSubmit={() => {}} className="todo-form">
-        
-        <div className="btn-container">
-          <button 
-            className="add-todo-btn">Add Todo
-          </button>
-          <button 
-            onClick={() => {}} className="clear-completed-btn">Clear Completed
-          </button>
-        </div>
+    <form 
+    className="todo-form"
+    onSubmit={(event) => {
+      event.preventDefault();
+      dispatch({ type:"ADD_TODO", payload: newTodo });
+      setNewTodo({item: ''})
+    }}
+    >
+      <div className="btn-container">
+        <button className="add-todo-btn" >Add Todo</button>
 
-        <input 
-          placeholder="Oh what todo, oh what todo..." 
-          onChange={() => {}} 
-          value={""} 
-          name="todo" 
-          className="add-todo-input"
-          required
-        />
+        <button 
+        className="clear-completed-btn"
+        onClick={(event) => {
+          event.preventDefault()}
+          } 
+        >
+        Clear Completed
+        </button>
+      </div>
 
-      </form>
+      <input 
+        placeholder="Oh what todo, oh what todo..." 
+        onChange={(e) => handleChanges(e)} 
+        value={newTodo.item} 
+        name="item" 
+        className="add-todo-input"
+        required
+      />
+
+    </form>
   );
 }
 

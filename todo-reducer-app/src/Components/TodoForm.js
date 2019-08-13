@@ -20,7 +20,7 @@ const TodoForm = ({ dispatch }) => {
     }}
     >
       <div className="btn-container">
-        <button className="add-todo-btn" >Add Todo</button>
+        <button type="submit" className="add-todo-btn" >Add Todo</button>
 
         <button 
         className="clear-completed-btn"

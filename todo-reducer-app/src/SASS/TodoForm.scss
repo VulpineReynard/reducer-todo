@@ -3,19 +3,48 @@
   flex-direction: column;
   justify-content: center;
   margin: 20px auto;
+  margin-top: 50px;
   width: 400px;
-  padding: 20px;
-  border: 1px solid black;
+  padding: 5px;
+  background: #46b3a9;
+  border-radius: 10px;
 
   .btn-container {
+    padding: 0 10px;
     display: flex;
     justify-content: space-between;
-    width: 90%;
-    margin: auto;
+    width: 95%;
+    margin: 5px auto;
 
     button {
       width: 49%;
       height: 40px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      color: white;
+      outline: none;
+      transition: all .3s;
+    }
+    .clear-completed-btn {
+      background: #b9186f;
+      &:hover {
+        background: #d61f81;
+      }
+      &:active {
+        transform: translateY(4px);
+        background: #ec87bd;
+      }
+    }
+    .add-todo-btn {
+      background: #5e41c7;
+      &:hover {
+        background: #7152e4;
+      }
+      &:active {
+        transform: translateY(4px);
+        background: #9a83ee;
+      }
     }
   }
   
@@ -23,7 +52,9 @@
     width: 90%;
     border: none;
     margin: 5px auto;
-    height: 35px;
-    padding: 5px 0;
+    height: 40px;
+    padding: 0 10px;
+    border-radius: 5px;
+    outline: none;
   }
 }

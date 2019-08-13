@@ -1,0 +1,29 @@
+.todo-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 20px auto;
+  width: 400px;
+  padding: 20px;
+  border: 1px solid black;
+
+  .btn-container {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+
+    button {
+      width: 49%;
+      height: 40px;
+    }
+  }
+  
+  input {
+    width: 90%;
+    border: none;
+    margin: 5px auto;
+    height: 35px;
+    padding: 5px 0;
+  }
+}

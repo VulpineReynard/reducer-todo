@@ -1,0 +1,24 @@
+.todo {
+  width: 80%;
+  height: 75px;
+  margin: 10px auto;
+  align-items: center;
+  cursor: pointer;
+  transition: .5s;
+  background: #ffae73;
+  border-radius: 5px;
+  padding: 10px;
+
+  p {
+    width: 100%;
+    text-align: center;
+    transition: all .5s;
+    overflow-wrap: break-word;
+  }
+}
+.todo.completed {
+  background: #ffad739f;
+}
+.todo.completed p {
+  text-decoration: line-through;
+}

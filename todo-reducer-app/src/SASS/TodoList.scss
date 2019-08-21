@@ -1,0 +1,27 @@
+.todo-list {
+  width: 300px;
+  border-radius: 10px;
+  background: white;
+  margin: 50px auto;
+  padding: 20px 0;
+}
+
+.todo-lists-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 90%;
+  margin: 20px auto;
+}
+.sub-todo-list-1 {
+  background: white;
+  width: 45%;
+  border-radius: 10px;
+  padding: 20px 0;
+}
+.sub-todo-list-2 {
+  background: white;
+  width: 45%;
+  border-radius: 10px;
+  padding: 20px 0;
+}
